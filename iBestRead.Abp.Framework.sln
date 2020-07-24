@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.solution Items", "00.solution Items", "{C6121DAB-CCD2-4A45-9903-18599D538541}"
+	ProjectSection(SolutionItems) = preProject
+		abp.props = abp.props
+		common.props = common.props
+		common.test.props = common.test.props
+		configureawait.props = configureawait.props
+		packages.props = packages.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10.src", "10.src", "{04248148-AC82-4E31-8F7A-4E1C8E9C6726}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20.test", "20.test", "{38F21943-551C-47DE-B45D-2BCBFE4D35A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iBestRead.Abp.Ldap", "src\iBestRead.Abp.Ldap\iBestRead.Abp.Ldap.csproj", "{D157B56B-1980-40E4-A9A5-2D128CCC51E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iBestRead.Abp.Ldap.Tests", "test\iBestRead.Abp.Ldap.Tests\iBestRead.Abp.Ldap.Tests.csproj", "{49EB17FF-4E06-49D3-B103-C5F35D1EAA42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D157B56B-1980-40E4-A9A5-2D128CCC51E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D157B56B-1980-40E4-A9A5-2D128CCC51E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D157B56B-1980-40E4-A9A5-2D128CCC51E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D157B56B-1980-40E4-A9A5-2D128CCC51E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49EB17FF-4E06-49D3-B103-C5F35D1EAA42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49EB17FF-4E06-49D3-B103-C5F35D1EAA42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49EB17FF-4E06-49D3-B103-C5F35D1EAA42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49EB17FF-4E06-49D3-B103-C5F35D1EAA42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D157B56B-1980-40E4-A9A5-2D128CCC51E6} = {04248148-AC82-4E31-8F7A-4E1C8E9C6726}
+		{49EB17FF-4E06-49D3-B103-C5F35D1EAA42} = {38F21943-551C-47DE-B45D-2BCBFE4D35A2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2DD8FF64-31BF-4DD7-8E6B-FA88FDD238F0}
+	EndGlobalSection
+EndGlobal

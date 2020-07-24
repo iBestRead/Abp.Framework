@@ -1,0 +1,11 @@
+<Project>
+
+  <PropertyGroup>
+    <PackageIconUrl>https://raw.githubusercontent.com/iBestRead/Assets/master/img/iBestRead-Logo-128.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/iBestRead/Abp.Framework</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/iBestRead/Abp.Framework/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/iBestRead/Abp.Framework</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="../../abp.props"></Import>
+  <Import Project="../../common.props"></Import>
+  <Import Project="../../packages.props"></Import>
+  <Import Project="../../configureawait.props"></Import>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Version>3.0.4.1</Version>
+    <Description>abp module for ldap</Description>
+    <AssemblyTitle>Vaptcha Sdk</AssemblyTitle>
+    <Authors>AkiniX</Authors>
+    <Company>iBestRead</Company>
+    <AssemblyName>iBestRead.Abp.Ldap</AssemblyName>
+    <PackageId>iBestRead.Abp.Ldap</PackageId>
+    <PackageTags>abp;abpvnext;ldap</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Novell.Directory.Ldap.NETStandard" Version="3.2.0" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="$(AbpVersion)" />
+  </ItemGroup>
+
+</Project>
