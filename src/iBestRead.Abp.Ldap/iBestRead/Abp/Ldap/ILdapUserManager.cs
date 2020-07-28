@@ -46,5 +46,26 @@ namespace iBestRead.Abp.Ldap
         /// <returns></returns>
         LdapUser Get(string dn);
 
+        /// <summary>
+        /// 重置指定用户的AD密码
+        /// </summary>
+        /// <param name="dn"></param>
+        /// <param name="newPassword"></param>
+        bool ResetPassword(string dn, string newPassword);
+
+        /// <summary>
+        /// 重置指定用户的AD密码
+        /// </summary>
+        bool ResetPassword(LdapUser ldapUser, string newPassword);
+
+        /// <summary>
+        /// 禁用指定用户
+        /// </summary>
+        bool DisableUser(LdapUser ldapUser);
+
+        /// <summary>
+        /// 禁用指定用户
+        /// </summary>
+        bool DisableUser(string dn);
     }
 }

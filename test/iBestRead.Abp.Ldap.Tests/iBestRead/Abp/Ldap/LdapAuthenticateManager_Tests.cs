@@ -33,7 +33,15 @@ namespace iBestRead.Abp.Ldap
         }
 
         [Fact]
-        public void Authenticate_With_Wrong_Password()
+        public void Authenticate_Failure_With_Wrong_Password()
+        {
+            var result = _authenticateManager.Authenticate("NonExistentNameA", "PasswordA");
+
+            result.ShouldBeFalse();
+        }
+        
+        [Fact]
+        public void Authenticate_Failure_With_Disable_User()
         {
             var result = _authenticateManager.Authenticate("NonExistentNameA", "PasswordA");
 

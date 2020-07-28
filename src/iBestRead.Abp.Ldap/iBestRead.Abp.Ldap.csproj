@@ -15,9 +15,9 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <Version>3.0.4.3</Version>
+    <Version>3.0.4.4</Version>
     <Description>abp module for ldap</Description>
-    <AssemblyTitle>Vaptcha Sdk</AssemblyTitle>
+    <AssemblyTitle>abp module for ldap</AssemblyTitle>
     <Authors>AkiniX</Authors>
     <Company>iBestRead</Company>
     <AssemblyName>iBestRead.Abp.Ldap</AssemblyName>

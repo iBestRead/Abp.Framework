@@ -78,5 +78,17 @@ namespace iBestRead.Abp.Ldap
 
             result.ShouldBeNull();
         }
+        
+        [Fact]
+        public void Can_DisableUser()
+        {
+            var result =
+                _ldapUserManager.DisableUser($"CN=Administrator,CN=Users,{_ldapOptions.DomainDistinguishedName}");
+            
+            result.ShouldBeTrue();
+            
+            
+        }
+        
     }
 }

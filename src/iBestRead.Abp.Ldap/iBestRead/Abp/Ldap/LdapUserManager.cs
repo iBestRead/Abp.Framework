@@ -92,7 +92,7 @@ namespace iBestRead.Abp.Ldap
             return QueryOne<LdapUser>(LdapOptions.SearchBase, conditions);
         }
 
-        public void ResetPassword(string dn, string newPassword)
+        public bool ResetPassword(string dn, string newPassword)
         {
             dn = Check.NotNullOrWhiteSpace(dn, nameof(dn));
             newPassword = Check.NotNullOrWhiteSpace(newPassword, nameof(newPassword));
@@ -102,10 +102,10 @@ namespace iBestRead.Abp.Ldap
                 throw new UserNotExistException(dn);
             }
 
-            ResetPassword(user, newPassword);
+            return ResetPassword(user, newPassword);
         }
 
-        public void ResetPassword(LdapUser ldapUser, string newPassword)
+        public bool ResetPassword(LdapUser ldapUser, string newPassword)
         {
             var encodedBytes = Encoding.Unicode.GetBytes($"\"{newPassword}\"").ToArray();
 
@@ -114,18 +114,20 @@ namespace iBestRead.Abp.Ldap
 
             using var ldapConnection = GetConnection();
             ldapConnection.Modify(ldapUser.Dn, modification);
+            return true;
         }
 
-        public void DisableUser(LdapUser ldapUser)
+        public bool DisableUser(LdapUser ldapUser)
         {
             var attribute = new LdapAttribute("userAccountControl", "514");
             var modification = new LdapModification(LdapModification.Replace, attribute);
 
             using var ldapConnection = GetConnection();
             ldapConnection.Modify(ldapUser.Dn, modification);
+            return true;
         }
 
-        public void DisableUser(string dn)
+        public bool DisableUser(string dn)
         {
             dn = Check.NotNullOrWhiteSpace(dn, nameof(dn));
 
@@ -135,7 +137,7 @@ namespace iBestRead.Abp.Ldap
                 throw new UserNotExistException(dn);
             }
 
-            DisableUser(user);
+            return DisableUser(user);
         }
 
     }
